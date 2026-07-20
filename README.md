@@ -1,30 +1,17 @@
-# Create-a-Secure-File-Sharing-System
-# Task 4: Secure File Sharing System with End-to-End Encryption
+# Task 4: Secure File Sharing System
 
-This project is a Python-based implementation of a secure file-sharing application designed to protect sensitive data during transit and storage. Developed as part of my Cybersecurity Internship at Internee.pk, the system simulates cloud storage workflows (such as AWS S3 or GCP Storage) while maintaining strict cryptographic boundaries.
+This project is a Secure File Sharing System built in Python. It ensures safe file exchanges using End-to-End Encryption (E2EE) and simulated Cloud Storage Pre-Signed URLs. Developed during my Cybersecurity Internship at Internee.pk.
 
-## Key Features
+## Features
+* **End-to-End Encryption:** Files are encrypted locally before being uploaded.
+* **Simulated Cloud Storage:** Emulates cloud bucket storage for uploading and downloading files.
+* **Pre-Signed URLs:** Generates secure, time-limited token links for safe sharing.
+* **Secure Decryption:** Encrypted files are downloaded and decrypted safely on the client side.
 
-* **End-to-End Encryption (E2EE):** Encrypts files locally on the client machine before any data is sent to the storage layer, ensuring zero-knowledge privacy.
-* **Simulated Cloud Storage Vault:** Emulates cloud bucket structures to programmatically handle data storage and object retrieval.
-* **Pre-Signed URLs:** Generates dynamic, time-limited, and tokenized access links to safely share assets with external parties without exposing the storage backbone.
-* **Local Client Decryption:** Fetches encrypted blocks from the vault and applies cryptographic keys strictly on the client side to recover the original content.
-
-## Architecture & Cryptography
-
-The system utilizes symmetric cryptography provided by the `cryptography` library. 
-
-1. **Fernet (AES-128 in CBC mode):** Used for encrypting and decrypting file data with a secure, 128-bit key.
-2. **Secure Tokenization:** Utilizes cryptographically secure random bytes to append unique authorization tokens to simulated S3 endpoints.
-
-## Project Structure
-
-* `secure_share.py` - Core source code containing the encryption modules, cloud simulation, and terminal user interface.
-* `README.md` - Technical documentation for the repository.
-
-## Installation & Setup
-
-1. **Clone the repository:**
+## How to Run
+1. Install dependency:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/Secure-File-Sharing-System.git](https://github.com/YOUR_USERNAME/Secure-File-Sharing-System.git)
-   cd Secure-File-Sharing-System
+   pip install cryptography
+2. Run the Application:
+   python secure_share.py
+   
