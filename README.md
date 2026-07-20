@@ -13,5 +13,6 @@ This project is a Secure File Sharing System built in Python. It ensures safe fi
    ```bash
    pip install cryptography
 2. Run the Application:
+   ```bash
    python secure_share.py
    
